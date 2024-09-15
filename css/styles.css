@@ -1,272 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=New+Amsterdam&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
 
+/*@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=New+Amsterdam&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+font-family: "Bungee Tint", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
-
+font-family: "New Amsterdam", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=New+Amsterdam&display=swap');
+font-family: "Nerko One", cursive;*/
 
 a {
-    list-style: none;
     text-decoration: none;
-    color: black;
-    font-size: 20px;
 }
 
-header {
-    position: relative;
-    width: 60%;
-    background-color: grey;
-    padding: 25px;
-    border-radius: 30px;
-    left: 290px;
-
-
-}
-
-.navbar-index ul li {
-
-    display: inline;
-    margin: 9px;
-    background-color: beige;
-    border-radius: 30px;
-    padding: 25px;
-    margin-top: 15px;
+li {
+    list-style: none;
 }
 
 
 
-
-
-
-.navbar-uno ul li {
-
-    display: inline;
-    margin: 9px;
-    background-color: beige;
-    border-radius: 30px;
-    padding: 25px;
-    margin-top: 15px;
-}
-
-
-
-
-.navbar-dos ul li {
-
-    display: inline;
-    margin: 9px;
-    background-color: beige;
-    border-radius: 30px;
-    padding: 25px;
-    margin-top: 15px;
-}
-
-.navbar-tres ul li {
-
-    display: inline;
-    margin: 9px;
-    background-color: beige;
-    border-radius: 30px;
-    padding: 25px;
-    margin-top: 15px;
-}
-
-
-
-
-.navbar-cuatro ul li {
-
-    display: inline;
-    margin: 9px;
-    background-color: beige;
-    border-radius: 30px;
-    padding: 25px;
-    margin-top: 15px;
-}
-
-.titulo-index {
-    font-family: "Bungee Tint", sans-serif;
-    text-align: center;
-}
-
-.box-one {
-    position: relative;
-    width: 20%;
-    left: 650px;
-
-
-    div {
-        height: 300px;
-        width: 200px;
-
-        h2 {
-            text-align: center;
-        }
-
+    header {
+        display: flex;
+       background-color: rgb(225, 205, 179);
+       justify-content: space-between;
+       align-items: center;
     }
+   
 
-}
-
-.footer-index {
-    position: relative;
-    width: 400px;
-    left: 585px;
-
-    h3 {
-        text-align: center;
-        font-family: "New Amsterdam", sans-serif;
-    }
-}
-
-
-.box-contactos {
-    position: relative;
-    left: 270px;
-    width: 60%;
-    border-radius: 40px;
-    background-color: cornsilk;
-    padding: 15px;
-    margin-top: 10px;
-
-    h1 {
-        text-align: center;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    h3 {
-        text-align: center;
-    }
-
-    img {
-        position: relative;
-        left: 350px;
-    }
-
-}
-
-
-
-form {
-    position: relative;
-    margin-top: 20px;
-    left: 600px;
-    width: 40%;
-}
-
-
-.titulo-productos {
-    text-align: center;
-}
-
-
-.box-productos {
-    position: relative;
-    width: 360px;
-    background-color: rgb(211, 204, 194);
-    padding: 10px 10px;
-    left: 570px;
-
-    img {
-        position: relative;
-        height: 200px;
-        width: 200px;
-        margin-top: 10px;
-        left: 75px;
-
-    }
-
-    p {
-        font-size: 25px;
-    }
-}
-
-
-.footer-1 {
-    position: relative;
-    left: 570px;
-    width: 30%;
-    margin-top: 30px;
-    color: grey;
-}
-
-
-
-.titulo-atencion {
-    text-align: center;
-}
-
-.box-atencion {
-    position: relative;
-    width: 40%;
-    left: 515px;
-
-    h2 {
-        text-align: center;
-        padding: 5px;
-        background-color: rgb(203, 231, 231);
-    }
-
-    p {
-        font-size: 20px;
-    }
-
-    .box-item {
-        height: 300px;
-        width: 400px;
-        margin: 20px;
-        border: solid black 2px;
-
-    }
-}
-
-.footer-atencion {
-    h3 {
-        text-align: center;
-    }
-
-    div {
-        position: relative;
-        width: 9%;
-        left: 670px;
-        border: solid 2px black;
-    }
-
-    a {
-        text-decoration: underline;
-    }
-
-}
-
-
-
-.perfume {
-
-    h1 {
-        text-align: center;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-
-    .perfume-item {
-        
-        margin-top: 15px;
-
-        h3 {
-            font-family: "Nerko One", cursive;
-            text-align: center;
-
-        }
-
-        img {
-            height: 300px;
-            width: 300px;
-            margin-left: 600px;
-        }
-    }
+   header nav {
+    margin-right: 90px;
+   }
     
-}
+
+    header nav ul {
+        display: flex;
+        gap: 30px;
+
+        a {
+            font-size: 30px;
+            color: black;
+
+        }
+      
+        a:hover {
+            border-radius: 30px;
+            padding: 30px;
+            background-color: whitesmoke;
+
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
