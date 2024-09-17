@@ -30,6 +30,7 @@ header nav {
 
 
 header nav ul {
+    flex-wrap: wrap;
     display: flex;
     gap: 30px;
 
@@ -50,6 +51,7 @@ header nav ul {
 
 
 .titulo-index {
+    flex-wrap: wrap;
     text-align: center;
     margin: 10px;
     background-color: gray;
@@ -72,14 +74,14 @@ header nav ul {
     h2 {
         text-align: center;
     }
-    
+
 
     div {
         height: 260px;
         width: 250px;
         border: solid 2px black;
         border-radius: 40px;
-        padding: 5px ;
+        padding: 5px;
 
 
         p {
@@ -88,19 +90,62 @@ header nav ul {
     }
 }
 
-.footer-index {
-    position: relative;
-    margin-top: 30px;
-    width: 40%;
-    left: 530px;
+@media screen and (max-width: 480px){
 
-   h3 {
-    text-align: center;
-   }
+    header {
+        img {
+            display: none;
+        }
+    }
 
-   
-   
+    header nav ul {
+        a {
+            font-size: 7px;
+        }
+    }
+
+    .box-one {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background-color: beige;
+    border-radius: 30px;
+    }
+
+}
     
+
+
+
+
+
+
+.box-contactos {
+    position: relative;
+    left: 600px;
+    width: 25%;
+
+    h1 {
+        width: 300px;
+        margin-top: 10px;
+        border-radius: 50px;
+        background-color: lightcyan;
+    }
+
+    .box-cards {
+        border-radius: 40px;
+        border: solid lightgray 2px;
+        background-color: lightblue;
+        padding-bottom: 6px;
+
+
+
+        h3 {
+            margin: 6px;
+        }
+    }
 }
 
 
@@ -109,9 +154,12 @@ header nav ul {
 
 .footer-contactanos {
     position: relative;
-    left: 600px;
+    left: 550px;
     width: 500px;
     border: solid 2px black;
+    margin-top: 40px;
+    background-color: whitesmoke;
+
     h4 {
         text-align: center;
         margin-bottom: 10px;
@@ -123,6 +171,163 @@ header nav ul {
         font-size: 40px;
         justify-content: center;
         gap: 70px;
-        
+
     }
+}
+
+
+
+
+
+
+
+.box-productos {
+    position: relative;
+    flex-wrap: wrap;
+    display: grid;
+    margin-top: 20px;
+    border-radius: 35px;
+    background-color: lightgrey;
+    width: 80%;
+    left: 150px;
+    justify-items: center;
+    row-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px 1fr;
+
+    grid-template-areas:
+        "titulo titulo titulo"
+        "fotouno fotodos fototres";
+
+    .titulo-productos {
+        grid-area: titulo;
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 30px;
+    }
+
+    .img-uno {
+        grid-area: fotouno;
+
+    }
+
+    .img-dos {
+        grid-area: fotodos;
+
+    }
+
+    .img-tres {
+        grid-area: fototres;
+
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+
+    }
+}
+
+.footer-1 {
+    position: relative;
+    flex-wrap: wrap;
+    top: 150px;
+    text-align: center;
+    color: gray;
+}
+
+
+
+
+
+
+
+.carousel-recomendados {
+    position: relative;
+    margin-top: 30px;
+    border: solid black;
+    width: 60%;
+    left: 300px;
+    h1 {
+        text-align: center;
+    }
+
+    h5 {
+        color: black;
+    }
+
+
+    p {
+        color: black;
+    }
+
+    img {
+        height: 550px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .carousel-recomendados {
+        position: relative;
+        left: 100px;
+    }
+}
+
+
+.titulo-atencion {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.box-atencion {
+    position: relative;
+    display: flex;
+    width: 80%;
+    left: 150px;
+    border-radius: 40px;
+    padding: 10px 0px 10px 0px;
+    background-color: black;
+    justify-content: center;
+    gap: 80px;
+
+
+
+    .box-item {
+        height: 300px;
+        width: 250px;
+        border-radius: 35px;
+        background-color: whitesmoke;
+
+
+        h2 {
+            text-align: center;
+        }
+       
+    }
+}
+
+
+
+
+
+
+
+.footer-atencion {
+position: relative;
+margin-top: 20px;
+width: 30%;
+border-radius: 35px;
+background-color: gray;
+left: 525px;
+
+h3 {
+    text-align: center;
+}
+a { 
+    font-size: 30px;
+    margin-left: 200px;
+}
 }
