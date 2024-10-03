@@ -1,0 +1,159 @@
+.main-ventas .box-universal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+a {
+  list-style: none;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+header div {
+  height: 25px;
+  padding: 5px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  gap: 25px;
+  list-style-type: none;
+  background-color: rgb(229, 220, 220);
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: all 2s;
+}
+header nav ul li:hover {
+  border-bottom: solid black 3px;
+}
+
+.main-index {
+  position: relative;
+  top: 20px;
+}
+.main-index h1 {
+  color: black;
+  text-align: center;
+}
+.main-index .box-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+  z-index: -1;
+}
+.main-index .box-index div {
+  border-radius: 40px;
+  box-shadow: 10px 10px 15px 5px grey;
+  transition: all 2s;
+}
+.main-index .box-index div:hover {
+  transition: all 2s;
+  transform: scale(1.15);
+}
+.main-index .box-index div img {
+  height: 300px;
+  width: 350px;
+}
+.main-index .box-index div h2 {
+  text-align: center;
+}
+
+.main-ventas h1 {
+  text-align: center;
+}
+.main-ventas .box-universal {
+  border: double black;
+  background-color: rgb(236, 227, 227);
+}
+.main-ventas .box-universal div {
+  border-left: dotted black;
+  border-right: dotted black;
+}
+.main-ventas .box-universal div img {
+  height: 300px;
+  width: 300px;
+}
+.main-ventas .box-universal div h2 {
+  text-align: center;
+  background-color: lightgray;
+}
+.main-ventas .box-universal div div {
+  border-top: solid black 1px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 5px;
+  background-color: lightcyan;
+}
+.main-ventas .box-universal div div span {
+  color: rgb(66, 188, 66);
+}
+.main-ventas .box-universal .the-icon img {
+  margin-left: 40px;
+}
+
+footer {
+  background-color: black;
+  margin-top: 100px;
+}
+footer .footer-superior {
+  display: flex;
+  margin-left: 60px;
+  gap: 70px;
+}
+footer .footer-superior div h4 {
+  color: white;
+}
+footer .footer-superior div h5 {
+  color: gray;
+  transition: all 2s;
+}
+footer .footer-superior div h5:hover {
+  transition: all 1s;
+  color: white;
+}
+footer .footer-superior .iconos-footer {
+  margin-top: 25px;
+}
+footer .footer-superior .iconos-footer a {
+  color: grey;
+  font-size: 30px;
+  margin: 7px;
+  transition: all 1s;
+}
+footer .footer-superior .iconos-footer a:hover {
+  transition: all 1s;
+  color: white;
+}
+footer .footer-inferior {
+  display: flex;
+  border-top: solid 1px grey;
+}
+footer .footer-inferior div {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+footer .footer-inferior div span {
+  color: white;
+}
+footer .footer-inferior p {
+  margin-left: 550px;
+  color: white;
+}
+
+/*# sourceMappingURL=estilos.css.map */

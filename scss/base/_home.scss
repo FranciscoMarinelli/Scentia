@@ -1,0 +1,212 @@
+@import "../utilities/extend";
+
+
+a {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+
+}
+
+header {
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    div {
+        height: 25px;
+        padding: 5px;
+        background-color: black;
+        text-align: center;
+        color: white;
+    }
+
+    nav {
+       ul{
+            display: flex;
+            justify-content: center;
+            height: 35px;
+            gap: 25px;
+            list-style-type: none;
+            background-color: rgb(229, 220, 220);
+
+            li {
+                a {
+                    color: black;
+                    text-decoration: none;
+                    transition: all 2s;
+                }
+
+                &:hover {
+                    border-bottom: solid black 3px;
+
+
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+
+.main-index {
+    position: relative;
+    top: 20px;
+
+    h1 {
+        color: black;
+        text-align: center;
+    }
+
+
+    .box-index{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 40px;
+        z-index: -1;
+
+
+
+      div {
+        border-radius: 40px;
+        box-shadow: 10px 10px 15px 5px grey;
+        transition: all 2s;
+        
+
+        &:hover {
+            transition: all 2s;
+            transform: scale(1.15);
+        }
+        img {
+            height: 300px;
+            width: 350px;
+           
+        }
+        h2 {
+            text-align: center;
+        }
+      }
+    }
+}
+
+
+
+.main-ventas {
+    h1 {
+        text-align: center
+    }
+    .box-universal {
+        @extend %fotos;
+        border: double black;
+        background-color: rgb(236, 227, 227);
+        div {
+            border-left: dotted black;
+            border-right: dotted black;
+    
+            img {
+                height: 300px;
+                width: 300px;
+            }
+    
+            h2 {
+                text-align: center;
+                background-color: lightgray;
+            }
+    
+            div {
+                border-top: solid black 1px;
+                text-align: center;
+                font-size: 20px;
+                margin-bottom: 5px;
+                background-color: lightcyan;
+                span {
+                    color: rgb(66, 188, 66);
+                    
+                }
+            }
+           
+        }
+        .the-icon {
+            img {
+                margin-left: 40px;
+            }
+        }
+    
+      
+    }
+}
+
+
+
+
+footer {
+    background-color: black;
+    margin-top: 100px;
+
+
+   .footer-superior {
+    display: flex;
+    margin-left: 60px;
+    gap: 70px;
+
+    div {
+        h4 {
+            color: white;
+        }
+    
+        h5 {
+            color: gray;
+            transition: all 2s;
+
+            &:hover {
+                transition: all 1s;
+                color: white;
+            }
+        }
+
+       
+    
+    }
+   
+    .iconos-footer {
+       margin-top: 25px;
+      a {
+        color: grey;
+      font-size: 30px;
+      margin: 7px;
+      transition: all 1s;
+
+
+      &:hover {
+        transition: all 1s;
+        color: white;
+      }
+      }
+    }
+   }
+
+   .footer-inferior {
+    display: flex;
+    border-top: solid 1px grey;
+    div {
+        margin-top: 20px;
+        margin-left: 10px;
+      span {
+        color: white;
+      }
+    }
+
+    p {
+        margin-left: 550px;
+        color: white;
+    }
+   }
+
+
+}
