@@ -4,3 +4,11 @@
     justify-content: center;
     gap: 40px;
 }
+
+%box {
+    flex-wrap: wrap;
+    position: relative;
+    left: 150px;
+    width: 80%;
+    border: lightgray 1px solid;
+}

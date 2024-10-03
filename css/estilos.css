@@ -5,6 +5,19 @@
   gap: 40px;
 }
 
+.box-ayuda {
+  flex-wrap: wrap;
+  position: relative;
+  left: 150px;
+  width: 80%;
+  border: lightgray 1px solid;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
 a {
   list-style: none;
   color: black;
@@ -44,10 +57,6 @@ header nav ul li:hover {
 .main-index {
   position: relative;
   top: 20px;
-}
-.main-index h1 {
-  color: black;
-  text-align: center;
 }
 .main-index .box-index {
   display: flex;
@@ -154,6 +163,42 @@ footer .footer-inferior div span {
 footer .footer-inferior p {
   margin-left: 550px;
   color: white;
+}
+
+.box-ayuda {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: 110px repeat(2, 150px);
+  grid-template-areas: "subtitulo subtitulo subtitulo" "pedidos pedidos pedidos" "envio corporativo devoluciones";
+}
+.box-ayuda .subtitulo-ayuda {
+  grid-area: subtitulo;
+}
+.box-ayuda .caja-entrega {
+  grid-area: envio;
+}
+.box-ayuda .caja-corporativo {
+  grid-area: corporativo;
+}
+.box-ayuda .caja-devoluciones {
+  grid-area: devoluciones;
+}
+.box-ayuda .caja-pedidos {
+  grid-area: pedidos;
+  border-top: solid gray 2px;
+}
+.box-ayuda div {
+  margin-left: 10px;
+}
+.box-ayuda a {
+  margin-top: 3px;
+  color: rgb(184, 182, 182);
+  transition: all 2s;
+}
+.box-ayuda a:hover {
+  transition: all 2s;
+  color: black;
 }
 
 /*# sourceMappingURL=estilos.css.map */

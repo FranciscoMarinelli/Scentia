@@ -1,5 +1,9 @@
 @import "../utilities/extend";
 
+h1 {
+    color: black;
+    text-align: center;
+}
 
 a {
     list-style: none;
@@ -57,10 +61,6 @@ header {
     position: relative;
     top: 20px;
 
-    h1 {
-        color: black;
-        text-align: center;
-    }
 
 
     .box-index{
@@ -209,4 +209,58 @@ footer {
    }
 
 
+}
+
+
+.box-ayuda {
+    @extend  %box;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns:repeat(3, 350px);
+    grid-template-rows: 110px repeat(2, 150px);
+    grid-template-areas: 
+    "subtitulo subtitulo subtitulo"
+    "pedidos pedidos pedidos"
+    "envio corporativo devoluciones";
+
+
+    .subtitulo-ayuda {
+        grid-area: subtitulo;
+    }
+
+   
+    .caja-entrega {
+        grid-area: envio;
+    }
+
+    .caja-corporativo {
+        grid-area: corporativo;
+    }
+
+    .caja-devoluciones {
+        grid-area: devoluciones;
+    }
+
+    .caja-pedidos {
+        grid-area: pedidos;
+        border-top: solid gray 2px;
+        
+    }
+
+
+    div {
+        margin-left: 10px;
+    }
+
+    a {
+        margin-top: 3px;
+        color: rgb(184, 182, 182);
+        transition: all 2s;
+
+        &:hover {
+            transition: all 2s;
+            color: black;
+        }
+    }
+   
 }
