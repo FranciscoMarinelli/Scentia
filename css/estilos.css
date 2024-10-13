@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-ventas .box-universal {
   display: flex;
   flex-wrap: wrap;
@@ -5,10 +6,9 @@
   gap: 40px;
 }
 
-.box-ayuda {
+.main-entregas .main-pedido, .main-entregas .main-pago, .main-pedido, .main-pago, .main-entregas, .main-devoluciones, .main-cambios, .box-ayuda {
   flex-wrap: wrap;
   position: relative;
-  left: 150px;
   width: 80%;
   border: lightgray 1px solid;
 }
@@ -16,6 +16,8 @@
 h1 {
   color: black;
   text-align: center;
+  font-family: "Georgia", serif;
+  margin: 5px;
 }
 
 a {
@@ -26,6 +28,7 @@ a {
 
 header {
   flex-wrap: wrap;
+  background-color: black;
   position: sticky;
   top: 0px;
   z-index: 1;
@@ -37,15 +40,18 @@ header div {
   text-align: center;
   color: white;
 }
+header nav {
+  background-color: rgb(229, 220, 220);
+}
 header nav ul {
   display: flex;
   justify-content: center;
   height: 35px;
-  gap: 25px;
+  gap: 45px;
   list-style-type: none;
-  background-color: rgb(229, 220, 220);
 }
 header nav ul li a {
+  font-size: 18px;
   color: black;
   text-decoration: none;
   transition: all 2s;
@@ -58,22 +64,28 @@ header nav ul li:hover {
   position: relative;
   top: 20px;
 }
+.main-index h1 {
+  color: #d35400;
+  background-color: black;
+}
 .main-index .box-index {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
-  gap: 40px;
+  gap: 80px;
   z-index: -1;
+  border: solid black 3px;
+  height: 450px;
 }
 .main-index .box-index div {
-  border-radius: 40px;
-  box-shadow: 10px 10px 15px 5px grey;
+  margin-top: 25px;
   transition: all 2s;
 }
 .main-index .box-index div:hover {
   transition: all 2s;
   transform: scale(1.15);
+  overflow: hidden;
 }
 .main-index .box-index div img {
   height: 300px;
@@ -121,6 +133,7 @@ footer {
   margin-top: 100px;
 }
 footer .footer-superior {
+  flex-wrap: wrap;
   display: flex;
   margin-left: 60px;
   gap: 70px;
@@ -135,6 +148,9 @@ footer .footer-superior div h5 {
 footer .footer-superior div h5:hover {
   transition: all 1s;
   color: white;
+}
+footer .footer-superior div a {
+  margin: 3px;
 }
 footer .footer-superior .iconos-footer {
   margin-top: 25px;
@@ -166,6 +182,7 @@ footer .footer-inferior p {
 }
 
 .box-ayuda {
+  left: 150px;
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(3, 350px);
@@ -199,6 +216,1108 @@ footer .footer-inferior p {
 .box-ayuda a:hover {
   transition: all 2s;
   color: black;
+}
+
+.main-cambios {
+  left: 150px;
+}
+.main-cambios p {
+  font-size: 17px;
+}
+.main-cambios div {
+  margin-left: 10px;
+}
+.main-cambios li {
+  margin: 5px;
+}
+
+.main-devoluciones {
+  left: 150px;
+}
+.main-devoluciones div {
+  margin-left: 10px;
+}
+
+.main-entregas {
+  left: 150px;
+}
+.main-entregas .titulo-entregas {
+  margin-right: 15px;
+  padding: 10px;
+  border-bottom: solid gray;
+}
+.main-entregas .titulo-envio {
+  margin-right: 15px;
+  padding: 10px;
+  border-top: solid gray;
+}
+.main-entregas div {
+  margin-left: 15px;
+}
+
+.main-pago {
+  left: 150px;
+}
+.main-pago p {
+  font-size: 18px;
+}
+.main-pago li {
+  font-size: 17px;
+}
+.main-pago div {
+  margin-left: 15px;
+}
+
+.main-pedido {
+  left: 150px;
+}
+.main-pedido h1 {
+  text-align: start;
+}
+.main-pedido div {
+  margin: 0px 15px 20px 15px;
+}
+
+.box-tienda {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 40px 200px 40px 200px 240px;
+  grid-template-areas: "titulo" "pc" "caba" "pb" "bsas" "interior";
+}
+.box-tienda h2 {
+  grid-area: titulo;
+  border-radius: 30px;
+  border: solid 2px black;
+  width: 7.5%;
+  margin-left: 700px;
+  padding: 2px;
+}
+.box-tienda .parrafo-lugar-c {
+  grid-area: pc;
+  text-align: center;
+  color: gray;
+  border-bottom: solid 1px gray;
+  width: 50%;
+  margin-left: 375px;
+}
+.box-tienda .esencia-caba {
+  grid-area: caba;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.box-tienda .esencia-caba div {
+  width: 200px;
+}
+.box-tienda .esencia-caba div p i {
+  margin-right: 2px;
+  font-size: 16px;
+}
+.box-tienda .parrafo-lugar-b {
+  grid-area: pb;
+  text-align: center;
+  color: gray;
+  border-bottom: solid 1px gray;
+  width: 50%;
+  margin-left: 375px;
+}
+.box-tienda .esencia-bsas {
+  grid-area: bsas;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.box-tienda .esencia-bsas div {
+  gap: 40px;
+  width: 200px;
+}
+.box-tienda .esencia-interior {
+  grid-area: interior;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.box-tienda .esencia-interior div {
+  width: 200px;
+}
+.box-tienda .parrafo-interior {
+  color: gray;
+  border-bottom: solid 1px gray;
+}
+
+.main-proposito {
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+.main-proposito .container-proposito {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.main-proposito .container-proposito h1 {
+  font-family: "Georgia", serif;
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.main-proposito .container-proposito p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.main-proposito .container-proposito p strong {
+  color: #d35400;
+}
+
+.body-promociones a {
+  text-decoration: none;
+}
+.body-promociones .main-promociones {
+  display: grid;
+  width: 95%;
+  margin: 0 auto;
+  row-gap: 20px;
+  column-gap: 30px;
+  border: solid black 3px;
+  background-color: azure;
+  grid-template-columns: 225px repeat(3, 1fr);
+  grid-template-rows: 70px 70px 350px;
+  grid-template-areas: "links titulo titulo titulo" "links trans credito debito" "links uñas perfume maquillaje";
+}
+.body-promociones .main-promociones h2 {
+  grid-area: titulo;
+  margin-left: 262px;
+  color: #d35400;
+}
+.body-promociones .main-promociones .promocion-transferencia {
+  grid-area: trans;
+  border: double black 3px;
+  background-color: rgb(184, 182, 182);
+}
+.body-promociones .main-promociones .promo-unas {
+  grid-area: uñas;
+  border: solid black 2px;
+  border-top: none;
+  margin-bottom: 5px;
+}
+.body-promociones .main-promociones .promocion-credito {
+  grid-area: credito;
+  border: double black 3px;
+  background-color: rgb(184, 182, 182);
+}
+.body-promociones .main-promociones .promo-perfumes {
+  grid-area: perfume;
+  border: solid black 2px;
+  border-top: none;
+  margin-bottom: 5px;
+}
+.body-promociones .main-promociones .promocion-debito {
+  grid-area: debito;
+  border: double black 3px;
+  background-color: rgb(184, 182, 182);
+  margin-right: 5px;
+}
+.body-promociones .main-promociones .promo-maquillajes {
+  grid-area: maquillaje;
+  border: solid black 2px;
+  border-top: none;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.body-promociones .main-promociones .links-promociones {
+  grid-area: links;
+  background-color: black;
+  color: yellow;
+}
+.body-promociones .main-promociones .links-promociones ul li a {
+  text-decoration: none;
+  color: #d35400;
+}
+.body-promociones .main-promociones img {
+  height: 200px;
+  width: 200px;
+  margin-left: 85px;
+}
+.body-promociones .main-promociones h3 {
+  text-align: center;
+}
+.body-promociones .main-promociones h4 {
+  text-align: center;
+}
+.body-promociones .main-promociones p {
+  text-align: center;
+}
+
+.main-tendencia {
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 75px;
+}
+.main-tendencia img {
+  height: 200px;
+  width: 200px;
+}
+.main-tendencia h2 {
+  text-align: center;
+  background-color: gray;
+  color: beige;
+}
+.main-tendencia .tendencia-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+}
+.main-tendencia .tendencia-box h3 {
+  color: white;
+  text-align: center;
+  margin: 5px;
+  border-radius: 35px;
+  border: solid 1px white;
+}
+.main-tendencia .tendencia-uno {
+  border: solid black 2px;
+}
+.main-tendencia .tendencia-dos {
+  border: solid black 2px;
+}
+.main-tendencia .tendencia-tres {
+  border: solid black 2px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    color: black;
+    text-align: center;
+    font-family: "Georgia", serif;
+    margin: 5px;
+  }
+  a {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+  }
+  header {
+    flex-wrap: wrap;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
+  header div {
+    height: 25px;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    color: white;
+  }
+  header nav {
+    background-color: rgb(229, 220, 220);
+  }
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    gap: 45px;
+    list-style-type: none;
+  }
+  header nav ul li a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    transition: all 2s;
+  }
+  header nav ul li:hover {
+    border-bottom: solid black 3px;
+  }
+  .main-index {
+    position: relative;
+    top: 20px;
+    width: 90%;
+    left: 40px;
+  }
+  .main-index h1 {
+    color: #d35400;
+    background-color: black;
+  }
+  .main-index .box-index {
+    flex-wrap: wrap;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "uno" "dos" "tres";
+    margin-top: 20px;
+    gap: 80px;
+    height: 1270px;
+    z-index: -1;
+    border: solid 2px black;
+  }
+  .main-index .box-index .ind-1 {
+    grid-area: uno;
+  }
+  .main-index .box-index .ind-2 {
+    grid-area: dos;
+    border-top: black solid 1px;
+    border-bottom: solid black 1px;
+  }
+  .main-index .box-index .ind-3 {
+    grid-area: tres;
+    border-top: black solid 1px;
+  }
+  .main-index .box-index div {
+    margin-top: 25px;
+  }
+  .main-index .box-index div img {
+    height: 300px;
+    width: 350px;
+    margin-left: 168px;
+  }
+  .main-index .box-index div h2 {
+    text-align: center;
+  }
+  footer {
+    background-color: black;
+    margin-top: 100px;
+  }
+  footer .footer-superior {
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 30px;
+    gap: 40px;
+  }
+  footer .footer-superior div h4 {
+    color: white;
+  }
+  footer .footer-superior div h5 {
+    color: gray;
+  }
+  footer .footer-superior div a {
+    margin: 3px;
+  }
+  footer .footer-superior .iconos-footer {
+    margin-top: 25px;
+  }
+  footer .footer-superior .iconos-footer a {
+    color: grey;
+    font-size: 30px;
+    margin: 7px;
+  }
+  footer .footer-inferior {
+    display: flex;
+    border-top: solid 1px grey;
+  }
+  footer .footer-inferior div {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  footer .footer-inferior div span {
+    color: white;
+  }
+  footer .footer-inferior p {
+    margin-left: 150px;
+    color: white;
+  }
+  .main-tendencia {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 40px;
+  }
+  .main-tendencia img {
+    height: 200px;
+    width: 200px;
+  }
+  .main-tendencia h2 {
+    text-align: center;
+    background-color: gray;
+    color: beige;
+  }
+  .main-tendencia .tendencia-box {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+  }
+  .main-tendencia .tendencia-box h3 {
+    color: white;
+    text-align: center;
+    margin: 5px;
+    border-radius: 35px;
+    border: solid 1px white;
+  }
+  .main-tendencia .tendencia-uno {
+    border: solid black 2px;
+  }
+  .main-tendencia .tendencia-dos {
+    border: solid black 2px;
+  }
+  .main-tendencia .tendencia-tres {
+    border: solid black 2px;
+  }
+  .body-promociones a {
+    text-decoration: none;
+  }
+  .body-promociones .main-promociones {
+    display: grid;
+    flex-wrap: wrap;
+    width: 95%;
+    row-gap: 20px;
+    border: solid black 3px;
+    background-color: azure;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 70px 350px 70px 350px 70px 350px 70px;
+    grid-template-areas: "titulo titulo" "trans trans  " "uñas uñas " "credito credito" "perfume perfume" "debito debito " "maquillaje maquillaje" "links links";
+  }
+  .body-promociones .main-promociones h2 {
+    grid-area: titulo;
+    margin-right: 200px;
+    color: #d35400;
+  }
+  .body-promociones .main-promociones .promocion-transferencia {
+    grid-area: trans;
+    border: double black 3px;
+    background-color: rgb(184, 182, 182);
+  }
+  .body-promociones .main-promociones .promo-unas {
+    grid-area: uñas;
+    border: solid black 2px;
+    border-top: none;
+    margin-bottom: 5px;
+  }
+  .body-promociones .main-promociones .promocion-credito {
+    grid-area: credito;
+    border: double black 3px;
+    background-color: rgb(184, 182, 182);
+  }
+  .body-promociones .main-promociones .promo-perfumes {
+    grid-area: perfume;
+    border: solid black 2px;
+    border-top: none;
+    margin-bottom: 5px;
+  }
+  .body-promociones .main-promociones .promocion-debito {
+    grid-area: debito;
+    border: double black 3px;
+    background-color: rgb(184, 182, 182);
+  }
+  .body-promociones .main-promociones .promo-maquillajes {
+    grid-area: maquillaje;
+    border: solid black 2px;
+    border-top: none;
+    margin-bottom: 5px;
+  }
+  .body-promociones .main-promociones .links-promociones {
+    grid-area: links;
+    background-color: black;
+    color: yellow;
+  }
+  .body-promociones .main-promociones .links-promociones ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .body-promociones .main-promociones .links-promociones ul li a {
+    text-decoration: none;
+    color: #d35400;
+  }
+  .body-promociones .main-promociones img {
+    height: 200px;
+    width: 200px;
+    margin-left: 260px;
+  }
+  .body-promociones .main-promociones h3 {
+    text-align: center;
+  }
+  .body-promociones .main-promociones h4 {
+    text-align: center;
+  }
+  .body-promociones .main-promociones p {
+    text-align: center;
+  }
+  .box-ayuda {
+    left: 85px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 75px repeat(2, 150px);
+    grid-template-areas: "subtitulo subtitulo" "pedidos envio" "corporativo devoluciones";
+  }
+  .box-ayuda .subtitulo-ayuda {
+    grid-area: subtitulo;
+    border-bottom: solid gray 2px;
+  }
+  .box-ayuda .caja-entrega {
+    grid-area: envio;
+  }
+  .box-ayuda .caja-corporativo {
+    grid-area: corporativo;
+  }
+  .box-ayuda .caja-devoluciones {
+    grid-area: devoluciones;
+  }
+  .box-ayuda .caja-pedidos {
+    grid-area: pedidos;
+  }
+  .box-ayuda div {
+    margin-left: 10px;
+  }
+  .box-ayuda a {
+    margin-top: 3px;
+    color: rgb(184, 182, 182);
+    transition: all 2s;
+  }
+  .box-ayuda a:hover {
+    transition: all 2s;
+    color: black;
+  }
+  .main-cambios {
+    left: 85px;
+  }
+  .main-cambios p {
+    font-size: 17px;
+  }
+  .main-cambios div {
+    margin-left: 10px;
+  }
+  .main-cambios li {
+    margin: 5px;
+  }
+}
+.main-devoluciones {
+  left: 85px;
+}
+.main-devoluciones div {
+  margin-left: 10px;
+}
+
+.main-entregas {
+  left: 85px;
+}
+.main-entregas .titulo-entregas {
+  margin-right: 15px;
+  padding: 10px;
+  border-bottom: solid gray;
+}
+.main-entregas .titulo-envio {
+  margin-right: 15px;
+  padding: 10px;
+  border-top: solid gray;
+}
+.main-entregas div {
+  margin-left: 15px;
+}
+.main-entregas .main-pago {
+  left: 85px;
+}
+.main-entregas .main-pago p {
+  font-size: 18px;
+}
+.main-entregas .main-pago li {
+  font-size: 17px;
+}
+.main-entregas .main-pago div {
+  margin-left: 15px;
+}
+.main-entregas .main-pedido {
+  left: 85px;
+}
+.main-entregas .main-pedido h1 {
+  text-align: start;
+}
+.main-entregas .main-pedido div {
+  margin: 0px 15px 20px 15px;
+}
+.main-entregas .box-tienda {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 40px 200px 40px 200px 240px;
+  grid-template-areas: "titulo" "pc" "caba" "pb" "bsas" "interior";
+}
+.main-entregas .box-tienda h2 {
+  grid-area: titulo;
+  border-radius: 30px;
+  border: solid 2px black;
+  width: 7.5%;
+  margin-left: 100px;
+  padding: 2px;
+}
+.main-entregas .box-tienda .parrafo-lugar-c {
+  grid-area: pc;
+  text-align: center;
+  color: gray;
+  border-bottom: solid 1px gray;
+  width: 50%;
+  margin-left: 375px;
+}
+.main-entregas .box-tienda .esencia-caba {
+  grid-area: caba;
+  justify-content: center;
+  gap: 50px;
+}
+.main-entregas .box-tienda .esencia-caba div {
+  width: 200px;
+}
+.main-entregas .box-tienda .esencia-caba div p i {
+  margin-right: 2px;
+  font-size: 16px;
+}
+.main-entregas .box-tienda .parrafo-lugar-b {
+  grid-area: pb;
+  text-align: center;
+  color: gray;
+  border-bottom: solid 1px gray;
+  width: 50%;
+  margin-left: 375px;
+}
+.main-entregas .box-tienda .esencia-bsas {
+  grid-area: bsas;
+  justify-content: center;
+  gap: 50px;
+}
+.main-entregas .box-tienda .esencia-bsas div {
+  gap: 40px;
+  width: 200px;
+}
+.main-entregas .box-tienda .esencia-interior {
+  grid-area: interior;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.main-entregas .box-tienda .esencia-interior div {
+  width: 200px;
+}
+.main-entregas .box-tienda .parrafo-interior {
+  color: gray;
+  border-bottom: solid 1px gray;
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    color: black;
+    text-align: center;
+    font-family: "Georgia", serif;
+    margin: 5px;
+  }
+  a {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+  }
+  header {
+    flex-wrap: wrap;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
+  header div {
+    height: 25px;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    color: white;
+  }
+  header nav {
+    background-color: rgb(229, 220, 220);
+  }
+  header nav ul {
+    display: flex;
+    height: 35px;
+    gap: 11px;
+    margin-right: 15px;
+    list-style-type: none;
+  }
+  header nav ul li a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    transition: all 2s;
+  }
+  header nav ul li:hover {
+    border-bottom: solid black 3px;
+  }
+  footer {
+    background-color: black;
+    margin-top: 100px;
+  }
+  footer .footer-superior {
+    flex-wrap: wrap;
+    display: grid;
+    margin-right: 20px;
+    row-gap: 10px;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 160px 70px 60px;
+    grid-template-areas: "pedido" "ayuda" "proposito" "items";
+  }
+  footer .footer-superior .link-pedido {
+    grid-area: pedido;
+  }
+  footer .footer-superior .link-ayuda {
+    grid-area: ayuda;
+  }
+  footer .footer-superior .link-proposito {
+    grid-area: proposito;
+  }
+  footer .footer-superior div h4 {
+    color: white;
+  }
+  footer .footer-superior div h5 {
+    color: gray;
+  }
+  footer .footer-superior div a {
+    margin: 3px;
+  }
+  footer .footer-superior .iconos-footer {
+    grid-area: items;
+  }
+  footer .footer-superior .iconos-footer a {
+    color: grey;
+    font-size: 30px;
+    margin: 7px;
+  }
+  footer .footer-inferior {
+    flex-direction: column;
+    row-gap: 8px;
+    border-top: solid 1px grey;
+  }
+  footer .footer-inferior div {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  footer .footer-inferior div span {
+    color: white;
+  }
+  footer .footer-inferior p {
+    grid-area: parrafo;
+    margin-left: 10px;
+    color: white;
+  }
+  .main-index {
+    position: relative;
+    top: 20px;
+    width: 95%;
+    left: 5px;
+  }
+  .main-index h1 {
+    color: #d35400;
+    background-color: black;
+  }
+  .main-index .box-index {
+    flex-wrap: wrap;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "uno" "dos" "tres";
+    margin-top: 20px;
+    gap: 10px;
+    height: 1270px;
+    z-index: -1;
+    border: solid black 1px;
+  }
+  .main-index .box-index .ind-1 {
+    grid-area: uno;
+    z-index: -2;
+  }
+  .main-index .box-index .ind-2 {
+    grid-area: dos;
+    z-index: -2;
+  }
+  .main-index .box-index .ind-3 {
+    grid-area: tres;
+    z-index: -2;
+  }
+  .main-index .box-index div {
+    margin-top: 25px;
+  }
+  .main-index .box-index div img {
+    height: 200px;
+    width: 150px;
+    margin-right: 150px;
+    overflow: hidden;
+  }
+  .main-index .box-index div h2 {
+    text-align: center;
+  }
+  .main-tendencia {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 20px;
+  }
+  .main-tendencia img {
+    height: 200px;
+    width: 200px;
+  }
+  .main-tendencia h2 {
+    text-align: center;
+    background-color: gray;
+    color: beige;
+  }
+  .main-tendencia .tendencia-box {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+  }
+  .main-tendencia .tendencia-box h3 {
+    color: white;
+    text-align: center;
+    margin: 5px;
+    border-radius: 35px;
+    border: solid 1px white;
+  }
+  .main-tendencia .tendencia-uno {
+    border: solid black 2px;
+  }
+  .main-tendencia .tendencia-dos {
+    border: solid black 2px;
+  }
+  .main-tendencia .tendencia-tres {
+    border: solid black 2px;
+  }
+  .body-promociones a {
+    text-decoration: none;
+  }
+  .body-promociones .main-promociones {
+    display: grid;
+    row-gap: 20px;
+    border: solid black 3px;
+    background-color: azure;
+    grid-template-columns: 300px;
+    grid-template-rows: 90px 350px 90px 350px 90px 350px 200px;
+    grid-template-areas: "trans  " "uñas  " "credito " "perfume " "debito " "maquillaje" "links ";
+  }
+  .body-promociones .main-promociones h2 {
+    display: none;
+  }
+  .body-promociones .main-promociones .promocion-transferencia {
+    grid-area: trans;
+    border: double black 3px;
+    background-color: rgb(184, 182, 182);
+  }
+  .body-promociones .main-promociones .promo-unas {
+    grid-area: uñas;
+    border: solid black 2px;
+    border-top: none;
+    margin-bottom: 5px;
+  }
+  .body-promociones .main-promociones .promocion-credito {
+    grid-area: credito;
+    border: double black 3px;
+    background-color: rgb(184, 182, 182);
+  }
+  .body-promociones .main-promociones .promo-perfumes {
+    grid-area: perfume;
+    border: solid black 2px;
+    border-top: none;
+    margin-bottom: 5px;
+  }
+  .body-promociones .main-promociones .promocion-debito {
+    grid-area: debito;
+    border: double black 3px;
+    background-color: rgb(184, 182, 182);
+  }
+  .body-promociones .main-promociones .promo-maquillajes {
+    grid-area: maquillaje;
+    border: solid black 2px;
+    border-top: none;
+    margin-bottom: 5px;
+  }
+  .body-promociones .main-promociones .links-promociones {
+    grid-area: links;
+    background-color: black;
+    color: yellow;
+  }
+  .body-promociones .main-promociones .links-promociones ul {
+    flex-direction: column;
+  }
+  .body-promociones .main-promociones .links-promociones ul li a {
+    text-decoration: none;
+    color: #d35400;
+  }
+  .body-promociones .main-promociones img {
+    height: 200px;
+    width: 200px;
+    margin-left: 45px;
+  }
+  .body-promociones .main-promociones h3 {
+    text-align: center;
+  }
+  .body-promociones .main-promociones h4 {
+    text-align: center;
+  }
+  .body-promociones .main-promociones p {
+    text-align: center;
+  }
+  .box-ayuda {
+    width: 95%;
+    left: 15px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 105px repeat(2, 150px);
+    grid-template-areas: "subtitulo subtitulo" "pedidos envio" "corporativo devoluciones";
+  }
+  .box-ayuda .subtitulo-ayuda {
+    grid-area: subtitulo;
+    border-bottom: solid gray 2px;
+  }
+  .box-ayuda .caja-entrega {
+    grid-area: envio;
+  }
+  .box-ayuda .caja-corporativo {
+    grid-area: corporativo;
+  }
+  .box-ayuda .caja-devoluciones {
+    grid-area: devoluciones;
+  }
+  .box-ayuda .caja-pedidos {
+    grid-area: pedidos;
+  }
+  .box-ayuda div {
+    margin-left: 10px;
+  }
+  .box-ayuda a {
+    margin-top: 3px;
+    color: rgb(184, 182, 182);
+    transition: all 2s;
+  }
+  .box-ayuda a:hover {
+    transition: all 2s;
+    color: black;
+  }
+  .main-cambios {
+    left: 85px;
+  }
+  .main-cambios p {
+    font-size: 17px;
+  }
+  .main-cambios div {
+    margin-left: 10px;
+  }
+  .main-cambios li {
+    margin: 5px;
+  }
+}
+.main-devoluciones {
+  left: 30px;
+}
+.main-devoluciones div {
+  margin-left: 10px;
+}
+
+.main-entregas {
+  left: 30px;
+}
+.main-entregas .titulo-entregas {
+  margin-right: 15px;
+  padding: 10px;
+  border-bottom: solid gray;
+}
+.main-entregas .titulo-envio {
+  margin-right: 15px;
+  padding: 10px;
+  border-top: solid gray;
+}
+.main-entregas div {
+  margin-left: 15px;
+}
+.main-entregas .main-pago p {
+  font-size: 18px;
+}
+.main-entregas .main-pago li {
+  font-size: 17px;
+}
+.main-entregas .main-pedido {
+  z-index: 0;
+  left: 30px;
+}
+.main-entregas .main-pedido h1 {
+  text-align: start;
+  overflow: hidden;
+  z-index: -1;
+}
+.main-entregas .main-pedido div {
+  margin: 0px 15px 20px 15px;
+}
+.main-entregas .box-tienda {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 40px 800px 40px 800px 800px;
+  grid-template-areas: "titulo" "pc" "caba" "pb" "bsas" "interior";
+}
+.main-entregas .box-tienda h2 {
+  grid-area: titulo;
+  border-radius: 30px;
+  border: solid 2px black;
+  width: 7.5%;
+  margin-left: 700px;
+  padding: 2px;
+}
+.main-entregas .box-tienda .parrafo-lugar-c {
+  grid-area: pc;
+  text-align: center;
+  color: gray;
+  border-bottom: solid 1px gray;
+  width: 50%;
+  margin-left: 375px;
+}
+.main-entregas .box-tienda .esencia-caba {
+  grid-area: caba;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.main-entregas .box-tienda .esencia-caba div {
+  width: 200px;
+}
+.main-entregas .box-tienda .esencia-caba div p i {
+  margin-right: 2px;
+  font-size: 16px;
+}
+.main-entregas .box-tienda .parrafo-lugar-b {
+  grid-area: pb;
+  text-align: center;
+  color: gray;
+  border-bottom: solid 1px gray;
+  width: 50%;
+  margin-left: 375px;
+}
+.main-entregas .box-tienda .esencia-bsas {
+  grid-area: bsas;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.main-entregas .box-tienda .esencia-bsas div {
+  gap: 40px;
+  width: 200px;
+}
+.main-entregas .box-tienda .esencia-interior {
+  grid-area: interior;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.main-entregas .box-tienda .esencia-interior div {
+  width: 200px;
+}
+.main-entregas .box-tienda .parrafo-interior {
+  color: gray;
+  border-bottom: solid 1px gray;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=estilos.css.map */

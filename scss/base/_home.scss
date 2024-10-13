@@ -1,8 +1,11 @@
 @import "../utilities/extend";
+@import "../utilities/variables";
 
 h1 {
     color: black;
     text-align: center;
+    font-family:$titulo;
+    margin: 5px;
 }
 
 a {
@@ -14,6 +17,7 @@ a {
 
 header {
     flex-wrap: wrap;
+    background-color:black;
     position: sticky;
     top: 0px;
     z-index: 1;
@@ -27,16 +31,18 @@ header {
     }
 
     nav {
+        background-color:$fondo;
        ul{
             display: flex;
             justify-content: center;
             height: 35px;
-            gap: 25px;
+            gap: 45px;
             list-style-type: none;
-            background-color: rgb(229, 220, 220);
+            
 
             li {
                 a {
+                    font-size: 18px;
                     color: black;
                     text-decoration: none;
                     transition: all 2s;
@@ -61,6 +67,11 @@ header {
     position: relative;
     top: 20px;
 
+    h1 {
+        color: $tomato;
+        background-color: black;
+    }
+
 
 
     .box-index{
@@ -68,20 +79,26 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;
-        gap: 40px;
+        gap: 80px;
         z-index: -1;
+        border: solid black 3px;
+        height: 450px;
+
+       
+           
+        
 
 
 
       div {
-        border-radius: 40px;
-        box-shadow: 10px 10px 15px 5px grey;
+        margin-top: 25px;
         transition: all 2s;
         
 
         &:hover {
             transition: all 2s;
             transform: scale(1.15);
+           overflow: hidden;
         }
         img {
             height: 300px;
@@ -104,7 +121,7 @@ header {
     .box-universal {
         @extend %fotos;
         border: double black;
-        background-color: rgb(236, 227, 227);
+        background-color: $crema;
         div {
             border-left: dotted black;
             border-right: dotted black;
@@ -126,7 +143,7 @@ header {
                 margin-bottom: 5px;
                 background-color: lightcyan;
                 span {
-                    color: rgb(66, 188, 66);
+                    color:$light-green;
                     
                 }
             }
@@ -150,15 +167,21 @@ footer {
     margin-top: 100px;
 
 
+
    .footer-superior {
+    flex-wrap: wrap;
     display: flex;
     margin-left: 60px;
+    
     gap: 70px;
+
 
     div {
         h4 {
             color: white;
         }
+
+       
     
         h5 {
             color: gray;
@@ -168,6 +191,10 @@ footer {
                 transition: all 1s;
                 color: white;
             }
+        }
+
+        a {
+            margin:3px;
         }
 
        
@@ -214,6 +241,7 @@ footer {
 
 .box-ayuda {
     @extend  %box;
+    left: 150px;
     display: grid;
     column-gap: 20px;
     grid-template-columns:repeat(3, 350px);
@@ -254,7 +282,7 @@ footer {
 
     a {
         margin-top: 3px;
-        color: rgb(184, 182, 182);
+        color: $variable-gris;
         transition: all 2s;
 
         &:hover {
@@ -263,4 +291,1612 @@ footer {
         }
     }
    
+} 
+
+
+
+.main-cambios {
+    @extend %box;
+    left: 150px;
+    p {
+        font-size: 17px;
+    }
+
+    div {
+        margin-left: 10px;
+    }
+    li {
+        margin: 5px;
+    }
 }
+
+
+.main-devoluciones {
+    @extend %box;
+    left: 150px;
+
+    div {
+        margin-left: 10px;
+    }
+}
+
+
+
+.main-entregas {
+    @extend %box;
+    left: 150px;
+    
+    .titulo-entregas {
+        margin-right: 15px;
+        padding: 10px;
+        border-bottom: solid gray;
+    }
+
+    .titulo-envio {
+        margin-right: 15px;
+        padding: 10px;
+        border-top: solid gray;
+    }
+    div {
+        margin-left: 15px;
+    }
+
+}
+
+
+.main-pago {
+    @extend %box;
+    left: 150px;
+
+    p {
+        font-size: 18px;
+    }
+
+
+    li {
+        font-size: 17px;
+    }
+
+    div {
+        margin-left: 15px;
+    }
+}
+
+
+
+
+.main-pedido {
+    @extend %box;
+    left: 150px;
+
+    h1 {
+        text-align: start;
+    }
+
+    
+    div {
+        margin: 0px 15px 20px 15px;
+    }
+}
+
+
+
+.box-tienda {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 40px 200px 40px 200px 240px;
+    grid-template-areas: 
+    "titulo"
+    "pc"
+    "caba"
+    "pb"
+    "bsas"
+    "interior";
+
+    h2{
+        grid-area: titulo;
+      
+       border-radius: 30px ;
+       border: solid 2px black;
+       width: 7.5%;
+        margin-left: 700px;
+        padding: 2px;
+        
+
+       
+    }
+
+    .parrafo-lugar-c {
+        grid-area: pc;
+        text-align: center;
+        color: gray;
+        border-bottom: solid 1px gray;
+        width: 50%;
+        margin-left: 375px;
+    }
+    
+
+   .esencia-caba {
+    grid-area:caba ;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    div {
+        width: 200px;
+
+        p {
+            i {
+                margin-right: 2px;
+                font-size: 16px;
+            }
+        }
+    }
+   }
+
+   .parrafo-lugar-b {
+    grid-area: pb;
+    text-align: center;
+    color: gray;
+    border-bottom: solid 1px gray;
+    width: 50%;
+    margin-left: 375px;
+   }
+
+   .esencia-bsas {
+    grid-area:bsas ;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    div {
+        gap: 40px;
+        width: 200px;
+    }
+   }
+   
+   
+    .esencia-interior {
+        grid-area:interior ;
+        display: flex; 
+        justify-content: center;
+       gap: 50px;
+
+        div {
+          width: 200px;
+        }
+    }
+
+    .parrafo-interior {
+        color: gray;
+        border-bottom: solid 1px gray;
+    }
+}
+
+
+
+.main-proposito {
+    flex-wrap: wrap;
+    background-color:black;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+
+    .container-proposito {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h1 {
+            font-family:$titulo ;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em; 
+            line-height: 1.6; 
+            margin-bottom: 15px;
+
+            strong {
+                color: $tomato;
+            }
+        }
+    }
+}
+
+
+
+
+.body-promociones {
+    a {
+        text-decoration: none;
+    }
+    .main-promociones {
+        display: grid;
+        width: 95%;
+        margin: 0 auto;
+        row-gap: 20px;
+        column-gap: 30px;
+        border: solid black 3px;
+        background-color: azure;
+        grid-template-columns:225px repeat(3, 1fr) ;
+        grid-template-rows: 70px 70px 350px;
+        grid-template-areas: 
+        "links titulo titulo titulo"
+        "links trans credito debito"
+        "links uñas perfume maquillaje";
+    
+    
+    
+        h2 {
+            grid-area:titulo ;
+            margin-left: 262px;
+            color: $tomato;
+        }
+    
+        .promocion-transferencia {
+            grid-area:trans ;
+            border: double black 3px;
+            background-color: $variable-gris;
+        }
+    
+        .promo-unas {
+            grid-area:uñas ;
+            border: solid  black 2px;
+            border-top: none;
+            margin-bottom: 5px;
+        }
+    
+        .promocion-credito {
+            grid-area: credito;
+            border: double black 3px;
+            background-color: $variable-gris;
+        }
+    
+        .promo-perfumes {
+            grid-area:perfume ;
+            border: solid  black 2px ;
+            border-top: none;
+            margin-bottom: 5px;
+        }
+    
+        .promocion-debito {
+            grid-area:debito ;
+            border: double black 3px;
+            background-color: $variable-gris;
+            margin-right: 5px;
+        }
+    
+        .promo-maquillajes {
+            grid-area:maquillaje ;
+            border: solid  black 2px;
+            border-top: none;
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+    
+        .links-promociones {
+            grid-area: links ;
+            background-color: black;
+            color: yellow;
+    
+            ul {
+                li{
+                    a {
+                        text-decoration: none;
+                        color:$tomato ;
+                    }
+                }
+            }
+    
+        }
+    
+        img {
+            height: 200px;
+            width: 200px;
+            margin-left: 85px;
+        }
+    
+        h3 {
+            text-align: center;
+        }
+    
+        h4 {
+            text-align: center;
+        }
+    
+        p {
+            text-align: center;
+        }
+    }
+    
+}
+
+
+
+
+
+
+.main-tendencia {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 75px;
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
+
+    h2 {
+        text-align: center;
+        background-color: gray;
+        color: beige;
+       
+    }
+
+
+    .tendencia-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: black;
+
+        h3 {
+            color: white;
+            text-align: center;
+            margin: 5px;
+            border-radius: 35px;
+            border: solid 1px white;
+        }
+        
+    }
+
+
+    .tendencia-uno {
+        border: solid black 2px;
+    }
+
+    .tendencia-dos {
+        border: solid black 2px;
+    }
+
+    .tendencia-tres {
+        border: solid black 2px;
+    }
+}
+
+
+
+
+
+
+
+
+@media  screen and (max-width:768px) {
+
+    h1 {
+        color: black;
+        text-align: center;
+        font-family:$titulo;
+        margin: 5px;
+    }
+    
+    a {
+        list-style: none;
+        color: black;
+        text-decoration: none;
+    
+    }
+
+
+    header {
+        flex-wrap: wrap;
+        background-color:black;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    
+        div {
+            height: 25px;
+            padding: 5px;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+    
+        nav {
+            background-color:$fondo;
+           ul{
+                display: flex;
+                justify-content: center;
+                height: 35px;
+                gap: 45px;
+                list-style-type: none;
+                
+    
+                li {
+                    a {
+                        font-size: 18px;
+                        color: black;
+                        text-decoration: none;
+                        transition: all 2s;
+                    }
+    
+                    &:hover {
+                        border-bottom: solid black 3px;
+    
+    
+                    }
+                }
+    
+            }
+        }
+    
+    
+    }
+
+
+.main-index {
+    position: relative;
+    top: 20px;
+    width: 90%;
+    left: 40px;
+    h1 {
+        color: $tomato;
+        background-color: black;
+    }
+    .box-index{
+        flex-wrap: wrap;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "uno"
+        "dos"
+        "tres";
+        margin-top: 20px;
+        gap: 80px;
+        height: 1270px;
+        z-index: -1;
+        border: solid 2px black;
+       
+       
+
+       
+        .ind-1 {
+            grid-area: uno;
+        }
+
+
+        .ind-2 {
+            grid-area: dos;
+            border-top: black solid 1px;
+            border-bottom: solid black 1px;
+        }
+        
+        .ind-3 {
+            grid-area: tres;
+            border-top: black solid 1px;
+        }
+
+
+
+      div {
+        margin-top: 25px;
+       
+        
+
+        img {
+            height: 300px;
+            width: 350px;
+            margin-left: 168px;
+           
+        }
+        h2 {
+            text-align: center;
+        }
+      }
+    }
+}
+    
+
+
+
+footer {
+    background-color: black;
+  margin-top: 100px;
+
+
+
+   .footer-superior {
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 30px;
+    
+    gap: 40px;
+
+
+    div {
+        h4 {
+            color: white;
+        }
+
+       
+    
+        h5 {
+            color: gray;
+           
+        }
+
+        a {
+            margin:3px;
+        }
+
+       
+    
+    }
+   
+    .iconos-footer {
+       margin-top: 25px;
+      a {
+        color: grey;
+      font-size: 30px;
+      margin: 7px;
+      
+      }
+      }
+    
+   }
+
+   .footer-inferior {
+    display: flex;
+    border-top: solid 1px grey;
+    div {
+        margin-top: 20px;
+        margin-left: 10px;
+      span {
+        color: white;
+      }
+    }
+
+    p {
+        margin-left: 150px;
+        color: white;
+    }
+   }
+
+
+}
+
+
+.main-tendencia {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 40px;
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
+
+    h2 {
+        text-align: center;
+        background-color: gray;
+        color: beige;
+       
+    }
+
+
+    .tendencia-box {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+
+       
+
+        h3 {
+            color: white;
+            text-align: center;
+            margin: 5px;
+            border-radius: 35px;
+            border: solid 1px white;
+        }
+        
+    }
+
+
+    .tendencia-uno {
+        border: solid black 2px;
+    }
+
+    .tendencia-dos {
+        border: solid black 2px;
+    }
+
+    .tendencia-tres {
+        border: solid black 2px;
+    }
+}
+
+
+
+.body-promociones {
+    a {
+        text-decoration: none;
+    }
+    .main-promociones {
+        display: grid;
+        flex-wrap: wrap;
+        width: 95%;
+       
+        row-gap: 20px;
+        border: solid black 3px;
+        background-color: azure;
+        grid-template-columns:1fr ;
+        grid-template-rows: 70px  70px 350px 70px 350px 70px 350px 70px;
+        grid-template-areas: 
+        "titulo titulo"
+        "trans trans  "
+        "uñas uñas "
+        "credito credito"
+        "perfume perfume"
+        "debito debito "
+        "maquillaje maquillaje"
+        "links links";
+    
+    
+    
+        h2 {
+            grid-area:titulo ;
+            margin-right: 200px;
+            color: $tomato;
+        }
+    
+        .promocion-transferencia {
+            grid-area:trans ;
+            border: double black 3px;
+            background-color: $variable-gris;
+        }
+    
+        .promo-unas {
+            grid-area:uñas ;
+            border: solid  black 2px;
+            border-top: none;
+            margin-bottom: 5px;
+        }
+    
+        .promocion-credito {
+            grid-area: credito;
+            border: double black 3px;
+            background-color: $variable-gris;
+        }
+    
+        .promo-perfumes {
+            grid-area:perfume ;
+            border: solid  black 2px ;
+            border-top: none;
+            margin-bottom: 5px;
+        }
+    
+        .promocion-debito {
+            grid-area:debito ;
+            border: double black 3px;
+            background-color: $variable-gris;
+           
+        }
+    
+        .promo-maquillajes {
+            grid-area:maquillaje ;
+            border: solid  black 2px;
+            border-top: none;
+            margin-bottom: 5px;
+           
+        }
+    
+        .links-promociones {
+            grid-area: links ;
+            background-color: black;
+            color: yellow;
+    
+            ul {
+                display: flex;
+                justify-content: space-between;
+                li{
+                    a {
+                        text-decoration: none;
+                        color:$tomato ;
+                    }
+                }
+            }
+    
+        }
+    
+        img {
+            height: 200px;
+            width: 200px;
+            margin-left: 260px;
+        }
+    
+        h3 {
+            text-align: center;
+        }
+    
+        h4 {
+            text-align: center;
+        }
+    
+        p {
+            text-align: center;
+        }
+    }
+    
+}
+
+
+.box-ayuda {
+    @extend %box;
+    left: 85px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: 75px repeat(2, 150px);
+    grid-template-areas: 
+    "subtitulo subtitulo"
+    "pedidos envio"
+    "corporativo devoluciones";
+
+
+    .subtitulo-ayuda {
+        grid-area: subtitulo;
+        border-bottom: solid gray 2px;
+    }
+
+   
+    .caja-entrega {
+        grid-area: envio;
+    }
+
+    .caja-corporativo {
+        grid-area: corporativo;
+    }
+
+    .caja-devoluciones {
+        grid-area: devoluciones;
+    }
+
+    .caja-pedidos {
+        grid-area: pedidos;
+        
+    }
+
+
+    div {
+        margin-left: 10px;
+    }
+
+    a {
+        margin-top: 3px;
+        color: $variable-gris;
+        transition: all 2s;
+
+        &:hover {
+            transition: all 2s;
+            color: black;
+        }
+    }
+   
+} 
+
+.main-cambios {
+    @extend %box;
+    left: 85px;
+    p {
+        font-size: 17px;
+    }
+
+    div {
+        margin-left: 10px;
+    }
+    li {
+        margin: 5px;
+    }
+}
+
+}
+
+
+.main-devoluciones {
+    @extend %box;
+    left: 85px;
+
+    div {
+        margin-left: 10px;
+    }
+}
+
+
+
+.main-entregas {
+    @extend %box;
+    left: 85px;
+    
+    .titulo-entregas {
+        margin-right: 15px;
+        padding: 10px;
+        border-bottom: solid gray;
+    }
+
+    .titulo-envio {
+        margin-right: 15px;
+        padding: 10px;
+        border-top: solid gray;
+    }
+    div {
+        margin-left: 15px;
+    }
+
+
+
+
+    .main-pago {
+        @extend %box;
+        left: 85px;
+    
+        p {
+            font-size: 18px;
+        }
+    
+    
+        li {
+            font-size: 17px;
+        }
+    
+        div {
+            margin-left: 15px;
+        }
+    }
+
+
+   
+    .main-pedido {
+        @extend %box;
+        left: 85px;
+    
+        h1 {
+            text-align: start;
+        }
+    
+        
+        div {
+            margin: 0px 15px 20px 15px;
+        }
+    }
+
+
+    .box-tienda {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 40px 200px 40px 200px 240px;
+        grid-template-areas: 
+        "titulo"
+        "pc"
+        "caba"
+        "pb"
+        "bsas"
+        "interior";
+    
+        h2{
+            grid-area: titulo;
+          
+           border-radius: 30px ;
+           border: solid 2px black;
+           width: 7.5%;
+            margin-left: 100px;
+            padding: 2px;
+            
+    
+           
+        }
+    
+        .parrafo-lugar-c {
+            grid-area: pc;
+            text-align: center;
+            color: gray;
+            border-bottom: solid 1px gray;
+            width: 50%;
+            margin-left: 375px;
+        }
+        
+    
+       .esencia-caba {
+        grid-area:caba ;
+       
+        justify-content: center;
+        gap: 50px;
+    
+        div {
+            width: 200px;
+    
+            p {
+                i {
+                    margin-right: 2px;
+                    font-size: 16px;
+                }
+            }
+        }
+       }
+    
+       .parrafo-lugar-b {
+        grid-area: pb;
+        text-align: center;
+        color: gray;
+        border-bottom: solid 1px gray;
+        width: 50%;
+        margin-left: 375px;
+       }
+    
+       .esencia-bsas {
+        grid-area:bsas ;
+      
+        justify-content: center;
+        gap: 50px;
+    
+        div {
+            gap: 40px;
+            width: 200px;
+        }
+       }
+       
+       
+        .esencia-interior {
+            grid-area:interior ;
+           flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+    
+            div {
+              width: 200px;
+            }
+        }
+    
+        .parrafo-interior {
+            color: gray;
+            border-bottom: solid 1px gray;
+        }
+    }
+    
+   
+}
+
+
+
+
+@media  screen and (max-width:320px) {
+    h1 {
+        color: black;
+        text-align: center;
+        font-family:$titulo;
+        margin: 5px;
+    }
+    
+    a {
+        list-style: none;
+        color: black;
+        text-decoration: none;
+    
+    }
+
+
+    header {
+        flex-wrap: wrap;
+        background-color:black;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    
+        div {
+            height: 25px;
+            padding: 5px;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+    
+        nav {
+            background-color:$fondo;
+           ul{
+                display: flex;
+                height: 35px;
+                gap: 11px;
+                margin-right: 15px;
+                list-style-type: none;
+                
+    
+                li {
+                    a {
+                        font-size: 14px;
+                        color: black;
+                        text-decoration: none;
+                        transition: all 2s;
+                    }
+    
+                    &:hover {
+                        border-bottom: solid black 3px;
+    
+    
+                    }
+                }
+    
+            }
+        }
+    
+    
+    }
+
+    footer {
+        background-color: black;
+        margin-top: 100px;
+    
+    
+    
+       .footer-superior {
+        flex-wrap: wrap;
+        display: grid;
+        margin-right: 20px;
+        row-gap: 10px;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 160px 70px 60px;
+        grid-template-areas:  
+        "pedido"
+        "ayuda"
+        "proposito"
+        "items";
+
+        .link-pedido {
+            grid-area: pedido;
+        }
+
+        .link-ayuda {
+            grid-area: ayuda;
+        }
+
+        .link-proposito {
+            grid-area:proposito;
+        }
+
+       
+    
+        div {
+            h4 {
+                color: white;
+            }
+    
+           
+        
+            h5 {
+                color: gray;
+                
+    
+               
+            }
+    
+            a {
+                margin:3px;
+            }
+    
+           
+        
+        }
+       
+        .iconos-footer {
+            grid-area: items;
+         
+          a {
+            color: grey;
+          font-size: 30px;
+          margin: 7px;
+    
+         
+          }
+        }
+       }
+    
+       .footer-inferior {
+        flex-direction: column;
+        row-gap: 8px;
+        border-top: solid 1px grey;
+        div {
+            
+            margin-top: 20px;
+            margin-left: 10px;
+          span {
+            color: white;
+          }
+        }
+    
+        p {
+            grid-area: parrafo;
+            margin-left: 10px;
+            color: white;
+        }
+       }
+    
+    
+    }
+
+
+    .main-index {
+        position: relative;
+        top: 20px;
+        width: 95%;
+        left: 5px;
+        h1 {
+            color: $tomato;
+            background-color: black;
+        }
+        .box-index{
+            flex-wrap: wrap;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            "uno"
+            "dos"
+            "tres";
+            margin-top: 20px;
+            gap: 10px;
+            height: 1270px;
+            z-index: -1;
+           border: solid black 1px;
+           
+           
+    
+           
+            .ind-1 {
+                grid-area: uno;
+                z-index: -2;
+            }
+    
+    
+            .ind-2 {
+                grid-area: dos;
+                z-index: -2;
+            }
+            
+            .ind-3 {
+                grid-area: tres;
+                z-index: -2;
+            }
+    
+    
+    
+          div {
+            margin-top: 25px;
+           
+            
+    
+            img {
+                height: 200px;
+                width: 150px;
+                margin-right: 150px;
+               
+                overflow: hidden;
+
+               
+            }
+            h2 {
+                text-align: center;
+            }
+          }
+        }
+    }
+
+
+    .main-tendencia {
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 20px;
+    
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    
+        h2 {
+            text-align: center;
+            background-color: gray;
+            color: beige;
+           
+        }
+    
+    
+        .tendencia-box {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+    
+           
+    
+            h3 {
+                color: white;
+                text-align: center;
+                margin: 5px;
+                border-radius: 35px;
+                border: solid 1px white;
+            }
+            
+        }
+    
+    
+        .tendencia-uno {
+            border: solid black 2px;
+        }
+    
+        .tendencia-dos {
+            border: solid black 2px;
+        }
+    
+        .tendencia-tres {
+            border: solid black 2px;
+        }
+    }
+
+
+    .body-promociones {
+        a {
+            text-decoration: none;
+        }
+                  
+        .main-promociones {
+            display: grid;
+           
+           
+            row-gap: 20px;
+            border: solid black 3px;
+            background-color: azure;
+            grid-template-columns:300px ;
+            grid-template-rows:   90px 350px 90px 350px 90px 350px 200px;
+            grid-template-areas: 
+            
+            "trans  "
+            "uñas  "
+            "credito "
+            "perfume "
+            "debito "
+            "maquillaje"
+            "links ";
+        
+        
+        
+            h2 {
+                display: none;
+            }
+        
+            .promocion-transferencia {
+                grid-area:trans ;
+                border: double black 3px;
+                background-color: $variable-gris;
+            }
+        
+            .promo-unas {
+                grid-area:uñas ;
+                border: solid  black 2px;
+                border-top: none;
+                margin-bottom: 5px;
+            }
+        
+            .promocion-credito {
+                grid-area: credito;
+                border: double black 3px;
+                background-color: $variable-gris;
+            }
+        
+            .promo-perfumes {
+                grid-area:perfume ;
+                border: solid  black 2px ;
+                border-top: none;
+                margin-bottom: 5px;
+            }
+        
+            .promocion-debito {
+                grid-area:debito ;
+                border: double black 3px;
+                background-color: $variable-gris;
+               
+            }
+        
+            .promo-maquillajes {
+                grid-area:maquillaje ;
+                border: solid  black 2px;
+                border-top: none;
+                margin-bottom: 5px;
+               
+            }
+        
+            .links-promociones {
+                grid-area: links ;
+                background-color: black;
+                color: yellow;
+        
+                ul {
+                   flex-direction: column;
+                    li{
+                        a {
+                            text-decoration: none;
+                            color:$tomato ;
+                        }
+                    }
+                }
+        
+            }
+        
+            img {
+                height: 200px;
+                width: 200px;
+                margin-left: 45px;
+            }
+        
+            h3 {
+                text-align: center;
+            }
+        
+            h4 {
+                text-align: center;
+            }
+        
+            p {
+                text-align: center;
+            }
+        }
+        
+    }
+
+
+    .box-ayuda {
+      width: 95%;
+        left: 15px;
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows: 105px repeat(2, 150px);
+        grid-template-areas: 
+        "subtitulo subtitulo"
+        "pedidos envio"
+        "corporativo devoluciones";
+    
+    
+        .subtitulo-ayuda {
+            grid-area: subtitulo;
+            border-bottom: solid gray 2px;
+        }
+    
+       
+        .caja-entrega {
+            grid-area: envio;
+        }
+    
+        .caja-corporativo {
+            grid-area: corporativo;
+        }
+    
+        .caja-devoluciones {
+            grid-area: devoluciones;
+        }
+    
+        .caja-pedidos {
+            grid-area: pedidos;
+            
+        }
+    
+    
+        div {
+            margin-left: 10px;
+        }
+    
+        a {
+            margin-top: 3px;
+            color: $variable-gris;
+            transition: all 2s;
+    
+            &:hover {
+                transition: all 2s;
+                color: black;
+            }
+        }
+       
+    } 
+
+
+
+
+    .main-cambios {
+        
+        left: 85px;
+        p {
+            font-size: 17px;
+        }
+    
+        div {
+            margin-left: 10px;
+        }
+        li {
+            margin: 5px;
+        }
+    }
+    
+    }
+    
+    
+    .main-devoluciones {
+      
+        left: 30px;
+    
+        div {
+            margin-left: 10px;
+        }
+    }
+    
+    
+    
+    .main-entregas {
+       
+        left: 30px;
+        
+        .titulo-entregas {
+            margin-right: 15px;
+            padding: 10px;
+            border-bottom: solid gray;
+        }
+    
+        .titulo-envio {
+            margin-right: 15px;
+            padding: 10px;
+            border-top: solid gray;
+        }
+        div {
+            margin-left: 15px;
+        }
+    
+    
+    
+    
+        .main-pago {
+           
+    
+        
+            p {
+                font-size: 18px;
+            }
+        
+        
+            li {
+                font-size: 17px;
+            }
+        
+           
+        }
+    
+    
+       
+        .main-pedido {
+           z-index: 0;
+            left: 30px;
+        
+            h1 {
+                text-align: start;
+                overflow: hidden;
+                z-index: -1;
+            }
+        
+            
+            div {
+                margin: 0px 15px 20px 15px;
+            }
+        }
+    
+    
+    
+        .box-tienda {
+            display: grid;
+            flex-wrap: wrap;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40px 40px 800px 40px 800px 800px;
+            grid-template-areas: 
+            "titulo"
+            "pc"
+            "caba"
+            "pb"
+            "bsas"
+            "interior";
+        
+            h2{
+                grid-area: titulo;
+              
+               border-radius: 30px ;
+               border: solid 2px black;
+               width: 7.5%;
+                margin-left: 700px;
+                padding: 2px;
+                
+        
+               
+            }
+        
+            .parrafo-lugar-c {
+                grid-area: pc;
+                text-align: center;
+                color: gray;
+                border-bottom: solid 1px gray;
+                width: 50%;
+                margin-left: 375px;
+            }
+            
+        
+           .esencia-caba {
+            grid-area:caba ;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+        
+            div {
+                width: 200px;
+        
+                p {
+                    i {
+                        margin-right: 2px;
+                        font-size: 16px;
+                    }
+                }
+            }
+           }
+        
+           .parrafo-lugar-b {
+            grid-area: pb;
+            text-align: center;
+            color: gray;
+            border-bottom: solid 1px gray;
+            width: 50%;
+            margin-left: 375px;
+           }
+        
+           .esencia-bsas {
+            grid-area:bsas ;
+           flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+        
+            div {
+                gap: 40px;
+                width: 200px;
+            }
+           }
+           
+           
+            .esencia-interior {
+                grid-area:interior ;
+                flex-direction: column;
+                justify-content: center;
+               gap: 50px;
+        
+                div {
+                  width: 200px;
+                }
+            }
+        
+            .parrafo-interior {
+                color: gray;
+                border-bottom: solid 1px gray;
+            }
+        }
+}
+
+
